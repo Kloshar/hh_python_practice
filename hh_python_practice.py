@@ -1,2 +1,2 @@
 # coding=windows-1251
-import task3
+import task3_1

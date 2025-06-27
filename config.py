@@ -1,0 +1,1 @@
+SETTINGS = {'debug':True}

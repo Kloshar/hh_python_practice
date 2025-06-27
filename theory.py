@@ -1,4 +1,5 @@
 # coding=windows-1251
+
 # result = 0 + 1 and False * 2 | 3
 # print(0 + 1 and False * 2 | 3)
 
@@ -73,8 +74,32 @@
 
 # ответ - Атрибут неверно инициализирован
 
-lst = [[i for i in range(j)] for j in [k for k in range(3)]]
-print(lst)
+# lst = [[i for i in range(j)] for j in [k for k in range(3)]]
+# print(lst)
 
 # ответ № 1 -> 0, 0,1
 
+# with open('output.txt', 'w') as f:
+#     for i in range(1, 6):
+#         f.write(str(i) + '\n')
+
+# ответ № 2
+
+# ответ № 2 tkinter
+
+#import config;config.SETTINGS.debug=False # у SETTING нет атрибута debug
+#from config import SETTINGS;SETTINGS={'debug':False} # корректно меняет SETTINGS
+#from config import SETTINGS as cfg; cfg['debug'] = False # изменяет cfg['debug']
+#import config;config.SETTINGS={'debug':False} # изменяет config.SETTINGS
+#import config;config.SETTINGS['debug']=False # изменяет config.SETTINGS['debug']
+
+#print(config.SETTINGS['debug'])
+
+# ответ № 1 import config;config.SETTINGS.debug=False
+
+# import re
+# string = 'as32.4..Fh.d6kJ3.94asd'
+# pattern = r'.\.\D\d\w{2}'
+# print(re.findall(pattern, string))
+
+# ответ # 5 h.d6kJ

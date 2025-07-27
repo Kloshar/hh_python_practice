@@ -27,6 +27,7 @@
     <Compile Include="middle3.py" />
     <Compile Include="middle2.py" />
     <Compile Include="middle1.py" />
+    <Compile Include="easy05.py" />
     <Compile Include="task3_1.py" />
     <Compile Include="task2_1.py" />
     <Compile Include="task1_1.py" />

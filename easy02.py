@@ -1,4 +1,5 @@
 # coding=windows-1251
+# Учебник по геометрии
 def is_right_triangle(side_string: str)->bool:
     sides = list(map(int, side_string.split()))
     c = max(sides)

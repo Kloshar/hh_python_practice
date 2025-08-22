@@ -1,4 +1,5 @@
 # coding=windows-1251 
+# Работа с матрицами
 def format_matrix (matrix_string: str)->str:
     lst = matrix_string.split(',')
     rows = int(lst[0])

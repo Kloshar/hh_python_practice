@@ -1,4 +1,5 @@
 # coding=windows-1251
+# Пароль подходит
 def check_password(password)->bool:
     spec_symbols = "!@#$%^&*(),.?\":{}|<>"
 

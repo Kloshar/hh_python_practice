@@ -1,4 +1,5 @@
 # coding=windows-1251 
+# Решение уравнений
 from os import replace
 
 def solve_linear_equation (equation: str)->str:

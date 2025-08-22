@@ -31,12 +31,12 @@
     <Compile Include="middle2.py" />
     <Compile Include="middle1.py" />
     <Compile Include="easy05.py" />
-    <Compile Include="task3_1.py" />
-    <Compile Include="task2_1.py" />
-    <Compile Include="task1_1.py" />
-    <Compile Include="task1.py" />
-    <Compile Include="task2.py" />
-    <Compile Include="task3.py" />
+    <Compile Include="easy10.py" />
+    <Compile Include="easy09.py" />
+    <Compile Include="easy04.py" />
+    <Compile Include="easy01.py" />
+    <Compile Include="easy02.py" />
+    <Compile Include="easy03.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

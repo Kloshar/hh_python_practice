@@ -1,4 +1,5 @@
 # coding=windows-1251
+# Подсчёт гласных
 def vowel_percentage(slogan:str)->str:
     vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯ"
     consonant = "бвгджзйклмнпрстфхчцшщъь"

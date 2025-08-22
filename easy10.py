@@ -1,4 +1,5 @@
 # coding=windows-1251
+# Чувствительная информация
 def mask(string_to_mask:str)->str:
     length = len(string_to_mask)
     newString = ""

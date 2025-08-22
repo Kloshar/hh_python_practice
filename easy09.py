@@ -1,4 +1,5 @@
 # coding=windows-1251
+# Система оценивания
 def passing_scores(scores:str)->str:
     scores = scores.split(' ')
     passed = 0

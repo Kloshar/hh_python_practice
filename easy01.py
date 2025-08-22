@@ -1,4 +1,5 @@
-# coding=windows-1251 
+# coding=windows-1251
+# Результаты собеседования
 def check_candidates (names_input: str, scores_input: str)->str:
     names = names_input.split(',')
     scores = scores_input.split('|')

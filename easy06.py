@@ -1,4 +1,5 @@
 # coding=windows-1251
+# Цензура
 import re
 def censor(text:str, blacklist:str)->str:
     newString = text

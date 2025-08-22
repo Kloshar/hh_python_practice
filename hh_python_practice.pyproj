@@ -21,6 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="easy08.py" />
     <Compile Include="easy07.py" />
     <Compile Include="easy06.py" />
     <Compile Include="exam.py" />

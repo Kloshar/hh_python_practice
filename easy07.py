@@ -1,4 +1,5 @@
 # coding=windows-1251
+# Обработка гласных
 import re
 def filter_vowels(text:str)->str:
     pattern = r'[а,у,о,и,э,ы,я,ю,е]'

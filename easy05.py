@@ -1,4 +1,5 @@
 # coding=windows-1251
+# Фильтрация результатов опроса
 def filter_unique_words(answer_list:str)->str:
     allWords = answer_list.split()
     filtered = ""

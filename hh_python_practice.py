@@ -1,2 +1,2 @@
 # coding=windows-1251
-import easy08
+import easy07

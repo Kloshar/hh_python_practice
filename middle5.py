@@ -10,7 +10,7 @@ def simply (string: str)->str:
     pattern4 = re.compile(r'(\d+\.\d+|\d+) *([\+\-\*\\]) *(\d+\.\d+|\d+)') #с группировкой по числам и знакам в виде списков
     #result = re.findall(pattern4, string)
 
-    result = re.findall(pattern4, string)    
+    result = re.findall(pattern4, string)     
     calc(result) 
 
     #result = re.sub(pattern4, calc, string)

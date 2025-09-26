@@ -11,7 +11,7 @@ def simply (string: str)->str:
     #result = re.findall(pattern4, string)
 
     result = re.findall(pattern4, string)    
-    calc(result)  
+    calc(result) 
 
     #result = re.sub(pattern4, calc, string)
 

@@ -18,12 +18,20 @@ def simply (string: str)->str:
     return ""
 
 def calc(matchobj: list)->str:
-    s = matchobj[0]
+    operator = matchobj[0][1]
+    num1 = float(matchobj[0][0])
+    num2 = float(matchobj[0][2])
 
+    if(operator == "+"):        
+        result = num1 + num2
+    elif operator == "-":
+        result = num1 - num2
+    elif operator == "*":
+        result = num1 * num2
+    elif operator == "/":
+        result = num1 / num2        
 
-    print(s)
-
-    return "!"
+    return result
 
 #text = input()
 #text = "10.01+0.01 \равно 10.01, 0.127 округляется до 0.13"

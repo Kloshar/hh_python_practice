@@ -23,9 +23,10 @@ def calc(matchobj: list)->list:
     #print(len(matchobj))
 
     for obj in matchobj:
-        operator = obj[1]
-        num1 = float(obj[0])
-        num2 = float(obj[2])
+        print(obj.group(2))
+        operator = obj.group(2)
+        num1 = float(obj.group(1))
+        num2 = float(obj.group(3))
         if(operator == "+"):
             result = num1 + num2
         elif operator == "-":

@@ -4,11 +4,19 @@ import re
 def simply (string: str)->str:
     #print(string)
     pattern = re.compile(r'[\+\-\*\\]') #только знаки операций
-    pattern2 = re.compile(r'\d+\.\d+|\d+') #только числа (целые или десятичные)
+    pattern2 = re.compile(r'(\d+\.\d+|\d+)') #только числа (целые или десятичные)
     pattern3 = re.compile(r'(?:\d+\.\d+|\d+) *[\+\-\*\\] *(?:\d+\.\d+|\d+)') #здесь объединено на выбор целое или десятичное, возможный пробел, один из знаков, возможный пробел, снова целое или десятичное
     pattern4 = re.compile(r'(\d+\.\d+|\d+) *([\+\-\*\\]) *(\d+\.\d+|\d+)') #с группировкой по числам и знакам в виде списков
-    expressions = re.finditer(pattern4, string)
-    result = re.sub(pattern4, calc, string)
+
+    result = re.sub(pattern4, calc, string) #вычисление выражений
+
+    result = re.sub(pattern2, rounding, result) #полученные числа округляем до двух знаков
+
+    return result
+
+def rounding(matchobj):
+    num = float(matchobj.group(0))
+    result = '{:.2f}'.format(round(num,2))
 
     return result
 

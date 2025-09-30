@@ -7,7 +7,7 @@ class TextProcessor:
 
     def extract_emails(self):
         
-        pattern1 = re.compile(r'[a-z]+', flags=re.IGNORECASE)
+        pattern1 = re.compile(r'[a-z1-9]+@[a-z1-9]+\.net|com', flags=re.IGNORECASE)
 
         result = re.findall(pattern1, self.text)
 

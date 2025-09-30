@@ -1,2 +1,2 @@
 # coding=windows-1251
-import middle5
+import middle6

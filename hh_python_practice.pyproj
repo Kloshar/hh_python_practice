@@ -26,6 +26,7 @@
     <Compile Include="easy06.py" />
     <Compile Include="exam.py" />
     <Compile Include="hh_python_practice.py" />
+    <Compile Include="middle6.py" />
     <Compile Include="middle5.py" />
     <Compile Include="middle4.py" />
     <Compile Include="middle3.py" />

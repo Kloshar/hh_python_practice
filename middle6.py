@@ -7,11 +7,13 @@ class TextProcessor:
 
     def extract_emails(self):
         
-        pattern1 = re.compile(r'\w')
+        pattern1 = re.compile(r'[a-z]+', flags=re.IGNORECASE)
 
+        result = re.findall(pattern1, self.text)
 
+        print(result)
 
-        print("Не найдено")
+        #print("Не найдено")
 
 #input_text = input()
 

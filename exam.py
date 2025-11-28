@@ -1,4 +1,5 @@
 # coding=windows-1251
+
 # N = int(input())
 # numbers = []
 # i = 0
@@ -16,8 +17,9 @@
 # result = [1]
 # result.append((0, 1))
 # result += (0, 1)
+# print(result)
 
-# weight = 10
+# weight = 71
 # result = (0 if weight < 70 else 1) if weight > 30 else -1
 
 # for i in range(0, 10):    
@@ -38,15 +40,37 @@
 #     print(a)
 # f()
 
+# from unittest import result
+
+# def myDef():
+#     print(f"something")
+#     return True
+# result = not myDef()
+
+# result = ~ 1.1
+# result = True or 1.1
+# result = True + 1.1
+# result = 1 << 2
+# result = not [1, 2, 3]
+
 # class Clock:    
 #     def __init__(self, type_of_clock):        
-#         self.type = type_of_clock        
-#         self.__time = "00:00:00"        
-#     def set_time(time):        
-#         self.__time = time    
-#     def tell_time():        
+#         self.type = type_of_clock #атрибут (поле) объекта класса
+#         self.__time = "00:00:00"
+
+#     def set_time(time): # пропущен self
+#         self.__time = time
+
+#     def tell_time(): # пропущен self
 #         return self.__time
 
-result = [i for i in range(5,26) if abs(i**0.5)**2 == i]
+# clock = Clock("table")
+# clock.set_time("qwerty")
 
-print(result)
+# with open('output.txt', 'w') as f:
+#     for i in range(1, 6):
+#         f.write(str(i) +'\n')
+
+
+# result = [i for i in range(5,26) if abs(i**0.5)**2 == i]
+# print(result)

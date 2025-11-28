@@ -6,7 +6,7 @@ def solve_linear_equation (equation: str)->str:
     variable = ''
     for i in equation:
         if(i.isalpha() == True):
-            variable = i    
+            variable = i
 
     equation = equation.replace('- ', '-')
     lst = equation.split(' ')

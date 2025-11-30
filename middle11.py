@@ -30,11 +30,11 @@ def CreateBookLists(data:str)->str:
     for stu in students: # перебираем студентов
         result += stu.name # нужно перенести дальше, и добавлять только если есть книги
         for subj in stu.interests: # перебираем интересы
-            print(f"{subj == list(books.values())[0]}")
-            print(all(x==subj for x in books.values())) # перебор элементов books и сравнение с subj
+            print(f"{list(books.values())[0]}")
+            #print(f"{subj == list(books.values())[0]}") # получаем перву
+            #print(all(b == subj for b in list(books.values())[0])) # перебор элементов books и сравнение с subj
 
-            if subj == books:
-                print()
+            #if books == subj: print()
 
 '''
 student_data = input()

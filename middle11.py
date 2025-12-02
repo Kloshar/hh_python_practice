@@ -24,22 +24,20 @@ def CreateBookLists(data:str)->str:
     for o in data.split('\n')[1].split(';'): # делим список на отдельные книги
         book = o.split(':')
         books[book[0]] = book[1] # добавляем книгу в словарь
-
     result = ""
-
+    nameAdded = False
     for stu in students: # перебираем студентов
-        result += stu.name # нужно перенести дальше, и добавлять только если есть книги
-        for subj in stu.interests: # перебираем интересы
-            print(f"{list(books.values())[0]}")
-            #print(f"{subj == list(books.values())[0]}") # получаем перву
-            #print(all(b == subj for b in list(books.values())[0])) # перебор элементов books и сравнение с subj
+        nameAdded = False
+        for book, theme in books.items(): # перебираем книги
+            for subj in stu.interests: # перебираем интересы            
+                if subj == theme:
+                    if nameAdded == False:
+                        result = result.rstrip(' ,')
+                        result += f";{stu.name}:"
+                    nameAdded = True
+                    result += f"{book}," # нужно перенести дальше, и добавлять только если есть книги
+    return result.strip(';,')
 
-            #if books == subj: print()
-
-'''
 student_data = input()
-'''
-
-student_data = "Светлана:Химия;Игорь:Математика,Физика\nХимия для чайников:Химия;Математика для всех:Математика;Квантовая механика:Физика"
 result = CreateBookLists(student_data)
-#print(result)
+print(result)

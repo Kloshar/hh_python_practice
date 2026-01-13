@@ -2,6 +2,7 @@
 # —писок дл€ чтени€
 # —овершенно очевидно, что задание не доделано. Ќет создани€ экземпл€ров класса и вызова методов класса, нет возвращаемых значений
 # поэтому добавлен дополнительный код на моЄ усмотрение
+# переделал код чтобы стало больше похоже на задание, но некоторые методы пришлось изменить
 
 class Student:
     def __init__(self,name,interests):
@@ -9,17 +10,35 @@ class Student:
         self.interests = interests.split(',')
 
 class Library:
-    def __init__(self):
-        pass
-    def compile_list(self,student):
-        pass
+    def __init__(self,book_data:str):
+        self.books = dict()
+        for o in book_data.split(';'): # делим список на отдельные книги
+            book = o.split(':')
+            self.books[book[0]] = book[1] # добавл€ем книгу в словарь
+    def compile_list(self,student_data:str)->str:
+        students = [] # список студентов и увлечений
+        for s in student_data.split(';'): # раздел€ем строку на студентов
+            part = s.split(':')
+            students.append(Student(part[0], part[1])) # добавл€ем студентов и увлечени€ в список
+        result = ""
+        nameAdded = False
+        for stu in students: # перебираем студентов
+            nameAdded = False
+            for book, theme in self.books.items(): # перебираем книги
+                for subj in stu.interests: # перебираем интересы            
+                    if subj == theme:
+                        if nameAdded == False:
+                            result = result.rstrip(' ,')
+                            result += f";{stu.name}:"
+                        nameAdded = True
+                        result += f"{book}," # нужно перенести дальше, и добавл€ть только если есть книги
+        return result.strip(';,')
 
 def CreateBookLists(data:str)->str:
     students = [] # список студентов и увлечений
     for s in data.split('\n')[0].split(';'): # раздел€ем строку на студентов
         part = s.split(':')
-        students.append(Student(part[0], part[1])) # добавл€ем студентов и увлечени€ в список
-    
+        students.append(Student(part[0], part[1])) # добавл€ем студентов и увлечени€ в список    
     books = dict() # словарь книг и их разделов
     for o in data.split('\n')[1].split(';'): # делим список на отдельные книги
         book = o.split(':')
@@ -36,8 +55,13 @@ def CreateBookLists(data:str)->str:
                         result += f";{stu.name}:"
                     nameAdded = True
                     result += f"{book}," # нужно перенести дальше, и добавл€ть только если есть книги
-    return result.strip(';,')
+    return result.strip(';,') # не используетс€. ƒобавил весь функционал в класс Library
 
 student_data = input()
-result = CreateBookLists(student_data)
-print(result)
+# book_data = input()
+student_data = "јнна:Ќаучна€ фантастика,ћатематика;»ван:»стори€,ƒокументальна€ литература"
+book_data = "ѕреступление и наказание:’удожественна€ литература;«адача трЄх тел:Ќаучна€ фантастика;»стори€ государства российского:»стори€"
+school_library = Library(book_data) # исправлена строчна€ буква
+# result = CreateBookLists(student_data)
+# print(result)
+print(school_library.compile_list(student_data))
